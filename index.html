@@ -6,13 +6,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
-    <link
-  rel="stylesheet"
+    <link rel="stylesheet"   
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css" />
     <title>Manage Landing Page</title>
+
 </head>
 <body class="relative">
     <!-- navbar -->
@@ -75,7 +75,8 @@
     <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0">
         <!-- left item -->
         <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
-        <h1 class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">Bring everyone together to build better products.</h1>
+        <h1 class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">
+          Bring everyone together to build better products.</h1>
        <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
         Manage makes it simple for software teams to plan day-to-day 
         tasks while keeping the larger team goals in view.
@@ -365,6 +366,79 @@
     </div>
   </footer>
 
+
+  
+  <section id="signup-modal" class="inset-0 z-30 fixed hidden">
+
+    <div class="flex h-screen justify-center items-center mx-auto backdrop-brightness-50">
+  
+    <div class="relative bg-brightRedSupLight rounded-2xl w-3/4 shadow-lg p-5 flex flex-col items-center justify-center md:w-2/5">
+
+
+
+        <div id="signup-close" class="close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute top-15 right-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+        </div>
+      
+
+        <h2 class="font-bold text-2xl">Sign Up</h2>
+        <p class="text-md my-4">Sign up to get started 🚀
+        
+        </p>
+
+        <form id="signup-form" class="flex flex-col w-3/4">
+          <div>
+
+            <label for="name"></label>
+            <input id="name" type="text" name="name" placeholder="Username" class="p-3 mb-4 rounded-xl w-full border-transparent">
+            <div class="error"></div>
+          </div> 
+
+          <div>
+            <label for="email"></label>
+            <input id="email" type="text" name="email" placeholder="Email" class="p-3 mb-4 rounded-xl border w-full border-transparent">
+            <div class="error"></div>
+          </div> 
+      
+          <div class="relative">
+            <label for="password"></label>
+            <input id="password" type="password" name="password" placeholder="Password" class="p-3 mb-4 rounded-xl border w-full border-transparent">
+            <i class="fa-solid fa-eye absolute top-4 right-4 text-gray-500" id="eye"></i>
+            <div class="error"></div> 
+          </div>
+
+         
+          <button class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-white hover:text-black hover:scale-110 duration-300 disabled">Sign Up</button>
+        </form>
+
+        <div class="my-5 grid grid-cols-3 items-center text-gray-500 w-3/4">
+          <hr class="border-gray-400">
+          <p class="text-center">0R</p>
+          <hr class="border-gray-400">
+          
+        </div>
+
+
+        <div class="relative w-3/4">
+       
+        <button class="p-3 px-6 pt-2 w-full text-white bg-brightRed rounded-full justify-center items-center hover:text-black hover:bg-white text-sm hover:scale-110 duration-300 disabled md:text-base">
+          <img src="images/google-icon.png" alt="google-icon" class="w-5 h-5 absolute top-5 left-4 lg:left-20 -translate-y-1/2 hidden md:block"/>
+          Sign Up With Google
+        </button>
+        </div>
+
+        <div class="mt-3 text-xs flex justify-between items-center text-gray-500 w-10/12 md:w-3/4">
+          <p>Do you have an account?</p>
+          <button id="login" class="py-2 px-5 bg-white text-bold text-gray-500 border rounded-xl hover:scale-110 duration-300 hover:bg-brightRed hover:text-white">Login</button>
+        </div>
+
+    </div>
+  </div>
+  </section> 
+
+<!-- 
   <section id="login-modal" class="inset-0 z-30 fixed hidden">
 
     <div class="py-8 flex h-screen justify-center items-center backdrop-brightness-50">
@@ -389,19 +463,15 @@
         <p class="text-md my-4">If you are already a member easily log in</p>
 
         <form class="flex flex-col"> 
-          
-          <input type="text" name="email" placeholder="Email" class="p-3 my-4 rounded-xl border">
+          <div class="input-control">
+          <input type="text" name="email" placeholder="Email" class="password p-3 my-4 rounded-xl border">
           <div class="relative">
-            <input id="password" type="password" name="password" placeholder="Password" class="p-3 my-4 rounded-xl border w-full">
-            <i class="fa-solid fa-eye absolute top-1/2 right-4 -translate-y-1/2 text-gray-500" id="eye"></i>
-
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" />
-            </svg> -->
-            
+            <input id="login-password" type="password" name="login-password" placeholder="Password" class="p-3 my-4 rounded-xl border w-full password">
+            <i class="fa-solid fa-eye absolute top-1/2 right-4 -translate-y-1/2 text-gray-500" id="eye"></i>    
           </div>
+       </div>
          
-          <button class="p-3 px-6 pt-2 text-black bg-brightRed rounded-full baseline hover:bg-white hover:scale-110 duration-300 disabled">Login</button>
+          <button id="login-id" class="p-3 px-6 pt-2 text-black bg-brightRed rounded-full baseline hover:bg-white hover:scale-110 duration-300 disabled">Login</button>
         </form>
 
         <div class="my-5 grid grid-cols-3 items-center text-gray-500">
@@ -431,13 +501,9 @@
 
 
       </div>
-
-
-
-
     </div>
   </div>
-  </section> 
+  </section>  -->
 
 
 
