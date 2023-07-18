@@ -352,10 +352,10 @@
 
       <!-- Input Container -->
       <div class="flex flex-col justify-between">
-        <form id="form">
+        <form id="news-form">
             <div class="flex space-x-3">
                 <input id="newsletter" type="email" class="flex-1 px-4 rounded-full focus:outline-none" placeholder="Updated in your inbox" required/>
-                <button id="submit" class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none">
+                <button id="news-submit" class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none">
                     Go
                 </button>
             </div>
@@ -372,7 +372,7 @@
 
     <div class="flex h-screen justify-center items-center mx-auto backdrop-brightness-50">
   
-    <div class="relative bg-brightRedSupLight rounded-2xl w-3/4 shadow-lg p-5 flex flex-col items-center justify-center md:w-2/5">
+    <div class="relative bg-brightRedSupLight rounded-2xl w-11/12 shadow-lg p-5 flex flex-col items-center justify-center mx-auto md:w-2/5">
 
 
 
@@ -388,32 +388,32 @@
         
         </p>
 
-        <form id="signup-form" class="flex flex-col w-3/4">
-          <div>
+        <form id="form" class="flex flex-col w-10/12 md:w-3/4">
+          <div class="input-control mb-4">
 
             <label for="name"></label>
-            <input id="name" type="text" name="name" placeholder="Username" class="p-3 mb-4 rounded-xl w-full border-transparent">
-            <div class="error"></div>
+            <input id="name" type="text" name="name" placeholder="Username" class="p-3  rounded-xl w-full border-transparent focus:outline-none">
+            <div class="error text-gray-800 text-xs"></div>
           </div> 
 
-          <div>
+          <div class="input-control mb-4">
             <label for="email"></label>
-            <input id="email" type="text" name="email" placeholder="Email" class="p-3 mb-4 rounded-xl border w-full border-transparent">
-            <div class="error"></div>
+            <input id="email" type="text" name="email" placeholder="Email" class="p-3  rounded-xl border w-full border-transparent focus:outline-none">
+            <div class="error text-gray-800 text-xs"></div>
           </div> 
       
-          <div class="relative">
+          <div class="input-control relative mb-4">
             <label for="password"></label>
-            <input id="password" type="password" name="password" placeholder="Password" class="p-3 mb-4 rounded-xl border w-full border-transparent">
+            <input id="password" type="password" name="password" placeholder="Password" class="p-3  rounded-xl border w-full border-transparent focus:outline-none">
             <i class="fa-solid fa-eye absolute top-4 right-4 text-gray-500" id="eye"></i>
-            <div class="error"></div> 
+            <div class="error text-gray-800 text-xs"></div> 
           </div>
 
          
-          <button class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-white hover:text-black hover:scale-110 duration-300 disabled">Sign Up</button>
+          <button id="submit" class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-white hover:text-black hover:scale-110 duration-300 disabled">Sign Up</button>
         </form>
 
-        <div class="my-5 grid grid-cols-3 items-center text-gray-500 w-3/4">
+        <div class="my-5 grid grid-cols-3 items-center text-gray-500 w-10/12 md:w-3/4">
           <hr class="border-gray-400">
           <p class="text-center">0R</p>
           <hr class="border-gray-400">
@@ -421,25 +421,26 @@
         </div>
 
 
-        <div class="relative w-3/4">
+        <div class="relative w-10/12 md:w-3/4">
        
-        <button class="p-3 px-6 pt-2 w-full text-white bg-brightRed rounded-full justify-center items-center hover:text-black hover:bg-white text-sm hover:scale-110 duration-300 disabled md:text-base">
-          <img src="images/google-icon.png" alt="google-icon" class="w-5 h-5 absolute top-5 left-4 lg:left-20 -translate-y-1/2 hidden md:block"/>
-          Sign Up With Google
-        </button>
+ 
+          <button class="p-3 px-6 pt-2 w-full text-white bg-brightRed rounded-full justify-center items-center hover:bg-white hover:scale-110 duration-300 disabled text-sm md:text-base">
+            <img src="images/google-icon.png" alt="google-icon" class="w-6 h-6 absolute top-1/2 left-3 -translate-y-1/2 "/>
+            Login With Google
+          </button>
         </div>
 
         <div class="mt-3 text-xs flex justify-between items-center text-gray-500 w-10/12 md:w-3/4">
           <p>Do you have an account?</p>
-          <button id="login" class="py-2 px-5 bg-white text-bold text-gray-500 border rounded-xl hover:scale-110 duration-300 hover:bg-brightRed hover:text-white">Login</button>
+          <button class="py-2 px-5 bg-white text-bold text-gray-700 border rounded-xl hover:scale-110 duration-300 hover:bg-brightRed hover:text-white border-brightRed">Login</button>
         </div>
 
     </div>
   </div>
   </section> 
 
-<!-- 
-  <section id="login-modal" class="inset-0 z-30 fixed hidden">
+
+  <!-- <section id="login-modal" class="inset-0 z-30 fixed hidden">
 
     <div class="py-8 flex h-screen justify-center items-center backdrop-brightness-50">
   

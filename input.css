@@ -105,6 +105,24 @@ input[type=password]::-ms-clear
 }
 
 
+
+
+
+.input-control.success input {
+    border-color: hsl(12, 88%, 59%);
+}
+
+.input-control.error input {
+    border-color: #5f5959;
+}
+/* 
+.input-control .error {
+    color: #5f5557;
+    font-size: 9px;
+    height: 13px;
+} */
+
+
 /* using swiper.js */
 /* html,
 body {
